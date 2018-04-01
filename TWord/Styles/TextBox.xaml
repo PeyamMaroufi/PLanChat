@@ -17,14 +17,14 @@
                 <ControlTemplate TargetType="{x:Type TextBox}">
 
                     <Grid Background="#E0F7FA">
-                        <Image Source="/images/status.png" Width="16" HorizontalAlignment="Left">
-                            <Image.Visibility>
+                        <Frame Source="/images/success.xaml" Width="16" HorizontalAlignment="Left">
+                            <Frame.Visibility>
                                 <MultiBinding Converter="{StaticResource InputToVisibility}">
                                     <Binding ElementName="inputText" Path="Text.IsEmpty"/>
                                     <Binding ElementName="inputText" Path="IsFocused"/>
                                 </MultiBinding>
-                            </Image.Visibility>
-                        </Image>
+                            </Frame.Visibility>
+                        </Frame>
                         <TextBlock Text=" What's up?" HorizontalAlignment="Center" FontFamily="{StaticResource LatoRegular}" FontSize="{StaticResource FontSizeSmall}" VerticalAlignment="Center" Foreground="{StaticResource ForegroundLightBrush}"  >
                             <TextBlock.Visibility>
                                 <MultiBinding Converter="{StaticResource InputToVisibility}">

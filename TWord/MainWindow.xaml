@@ -101,22 +101,22 @@
                                             <MenuItem Header="_File" >
                                                 <MenuItem Header="_Status">
                                                     <MenuItem.Icon>
-                                                        <Image Source="/images/status.png"/>
+                                                        <Frame Source="/images/success.xaml"/>
                                                     </MenuItem.Icon> 
                                                 </MenuItem>
                                                 <MenuItem Header="_New Connection">
                                                     <MenuItem.Icon>
-                                                        <Image Source="/images/AddContact.png"/>
+                                                        <Frame Source="/images/user.xaml"/>
                                                     </MenuItem.Icon>
                                                 </MenuItem>
                                                 <MenuItem Header="_Group Conversation">
                                                     <MenuItem.Icon>
-                                                        <Image Source="/images/group.png"/>
+                                                        <Frame Source="/images/team.xaml"/>
                                                     </MenuItem.Icon>
                                                 </MenuItem>
                                                 <MenuItem Header="_Exit">
                                                     <MenuItem.Icon>
-                                                        <Image Source="/images/exit.png"/>
+                                                        <Frame Source="/images/logout.xaml"/>
                                                     </MenuItem.Icon>
                                                 </MenuItem>
 
@@ -124,17 +124,17 @@
                                             <MenuItem Header="_Tools" >
                                                 <MenuItem Header="_Settings" >
                                                     <MenuItem.Icon>
-                                                        <Image Source="/images/settings.png"/>
+                                                        <Frame Source="/images/controls.xaml"/>
                                                     </MenuItem.Icon>
                                                 </MenuItem>
                                                 <MenuItem Header="_About">
                                                     <MenuItem.Icon>
-                                                        <Image Source="/images/About.png"/>
+                                                        <Frame Source="/images/information.xaml"/>
                                                     </MenuItem.Icon>
                                                 </MenuItem>
                                                 <MenuItem Header="_FAQ">
                                                     <MenuItem.Icon>
-                                                        <Image Source="/images/FAQ.png"/>
+                                                        <Frame Source="/images/question.xaml"/>
                                                     </MenuItem.Icon>
                                                 </MenuItem>
 

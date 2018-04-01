@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--This file is NOT compatible with Silverlight-->
+<Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" Stretch="Uniform">
+  <Canvas Name="Layer_1" Canvas.Left="0" Canvas.Top="0" Width="417.118" Height="417.118">
+    <Canvas.RenderTransform>
+      <TranslateTransform X="0" Y="0"/>
+    </Canvas.RenderTransform>
+    <Canvas.Resources/>
+    <!--Unknown tag: metadata-->
+    <!--Unknown tag: sodipodi:namedview-->
+    <Canvas Name="g91">
+      <Canvas Name="g87">
+        <Canvas Name="g75">
+          <Canvas Name="XMLID_16_">
+            <Canvas Name="g72">
+              <Path xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Name="path70" Fill="#FFFCD09F">
+                <Path.Data>
+                  <PathGeometry Figures="M176.505 0c46.66 0 84.49 37.82 84.49 84.48c0 46.67-37.83 110.49-84.49 110.49       s-84.49-63.82-84.49-110.49C92.015 37.82 129.845 0 176.505 0z" FillRule="NonZero"/>
+                </Path.Data>
+              </Path>
+            </Canvas>
+          </Canvas>
+        </Canvas>
+        <Ellipse xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Canvas.Left="213.4" Canvas.Top="237.1" Width="180" Height="180" Name="circle77" Fill="#FFEF806F"/>
+        <Canvas Name="g81">
+          <Rectangle xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Canvas.Left="241.14" Canvas.Top="319.618" Width="124.451" Height="15" Name="rect79" Fill="#FFFFFFFF"/>
+        </Canvas>
+        <Canvas Name="g85">
+          <Rectangle xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Canvas.Left="295.865" Canvas.Top="264.893" Width="15" Height="124.451" Name="rect83" Fill="#FFFFFFFF"/>
+        </Canvas>
+      </Canvas>
+      <Path xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Name="path89" Fill="#FF1EA6C6">
+        <Path.Data>
+          <PathGeometry Figures="M199.363 327.118c0 21.69 6.67 41.85 18.09 58.54c-13.28 2.42-26.97 3.68-40.95 3.68   c-58.79 0-112.38-22.3-152.75-58.91v-0.13c0-60.89 35.63-113.45 87.17-137.98c19.37 19.32 42.05 29.73 65.58 29.73   c23.54 0 46.21-10.41 65.59-29.73c16.76 7.98 31.84 18.92 44.54 32.15C237.213 232.488 199.363 275.468 199.363 327.118z" FillRule="NonZero"/>
+        </Path.Data>
+      </Path>
+    </Canvas>
+    <Canvas Name="g93"/>
+    <Canvas Name="g95"/>
+    <Canvas Name="g97"/>
+    <Canvas Name="g99"/>
+    <Canvas Name="g101"/>
+    <Canvas Name="g103"/>
+    <Canvas Name="g105"/>
+    <Canvas Name="g107"/>
+    <Canvas Name="g109"/>
+    <Canvas Name="g111"/>
+    <Canvas Name="g113"/>
+    <Canvas Name="g115"/>
+    <Canvas Name="g117"/>
+    <Canvas Name="g119"/>
+    <Canvas Name="g121"/>
+  </Canvas>
+</Viewbox>
