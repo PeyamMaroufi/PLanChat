@@ -254,6 +254,16 @@
     <Folder Include="Menues\" />
     <Folder Include="Pages\" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\FAQ.png" />
+    <Resource Include="images\status.png" />
+    <Resource Include="images\exit.png" />
+    <Resource Include="images\About.png" />
+    <Resource Include="images\group.png" />
+    <Resource Include="images\settings.png" />
+    <Resource Include="images\AddContact.png" />
+    <Resource Include="images\searchUser.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Fody.2.1.0\build\netstandard1.0\Fody.targets" Condition="Exists('..\packages\Fody.2.1.0\build\netstandard1.0\Fody.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
