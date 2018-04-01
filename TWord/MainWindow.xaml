@@ -1,0 +1,186 @@
+﻿<Window x:Class="TWord.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TWord"
+        mc:Ignorable="d"
+        WindowStyle="None"
+        x:Name="AppWindow"
+        WindowStartupLocation="CenterScreen"
+        AllowsTransparency="True"
+        MinWidth="{Binding WindowMinimumWidth}"
+        MinHeight="{Binding WindowMinimumHeight}"
+        Icon="/images/Logo/logo-small.png"
+        Title="Welcome To Terco" Height="800" Width="400">
+
+    <Window.Resources>
+        <Style TargetType="{x:Type local:MainWindow}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Window}">
+                        <!--Outer border with dropshadow margin-->
+                        <Border Padding="{Binding OutMarginSizeThickness, FallbackValue=0}">
+                            <!-- Main window outline -->
+                            <Grid>
+                                <!-- Opacity mask for corner on grid-->
+                                <Border x:Name="Container"
+                                        Background="{StaticResource CornerColorBrush}"
+                                        CornerRadius="{Binding WindowCornerRadius, FallbackValue=0}"/>
+
+                                <!-- Window border and dropshadow and radius outline  border -->
+                                <Border CornerRadius="{Binding WindowCornerRadius, FallbackValue=6}"
+                                        Background="{Binding TopBarColorBrush, FallbackValue=#fafafaff}">
+                                    <Border.Effect>
+                                        <DropShadowEffect ShadowDepth="0" Opacity="0.2"/>
+                                    </Border.Effect>
+                                </Border>
+
+                                <!-- The main window content -->
+                                <Grid>
+
+                                    <!-- Corner Clicing -->
+                                    <Grid.OpacityMask>
+                                        <VisualBrush Visual="{Binding ElementName=Container}"/>
+                                    </Grid.OpacityMask>
+
+                                    <!-- Row definition -->
+                                    <Grid.RowDefinitions>
+                                        <!-- Title Bar-->
+                                        <RowDefinition Height="{Binding TitleHeightGridLength, FallbackValue=32}"/>
+                                        <!-- Drop shadow-->
+                                        <RowDefinition Height="Auto"/>
+                                        <!-- Window Content-->
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="*"/>
+
+                                    </Grid.RowDefinitions>
+
+                                    <!-- Title Bar -->
+                                    <Grid  Grid.Column="0" Panel.ZIndex="1">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="5*"/>
+                                            <RowDefinition Height="11*"/>
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <!-- Icon-->
+                                            <ColumnDefinition Width="Auto"/>
+                                            <!-- Title-->
+                                            <ColumnDefinition Width="*"/>
+                                            <!-- Buttons-->
+                                            <ColumnDefinition Width="Auto"/>
+                                        </Grid.ColumnDefinitions>
+
+                                        <!-- Icon -->
+                                        <Button Style="{StaticResource SystemIconButton}" Command="{Binding MenuCommand}" Grid.ColumnSpan="2" Margin="0,0,263,0" Grid.RowSpan="2">
+                                            <Image Source="/images/Logo/Logo-small.png"/>
+                                        </Button>
+
+                                        <!-- Title text -->
+                                        <Viewbox Grid.Column="0" Grid.ColumnSpan="3" Margin="-1" Grid.RowSpan="2" >
+                                            <!--<TextBlock Style="{StaticResource HeaderText}"  Text="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=Title, FallbackValue='Welcome!'}"/>-->
+                                            <StackPanel>
+                                                <TextBlock FontFamily="{StaticResource LatoBold}" FontSize="{StaticResource FontSizeRegular}" Margin="0,2,0,2">
+                                                    <Run Text="L" Foreground="{StaticResource WordBlueBrush}"/><Run Text="A" Foreground="{StaticResource WordOrangeBrush}"/><Run Text="N" Foreground="{StaticResource WordGreenBrush}"/><Run Text=" " Foreground="{StaticResource WordRedBrush}"/><Run Text="C" Foreground="{StaticResource WordBlueBrush}"/><Run Text="H" Foreground="{StaticResource WordBlueBrush}"/><Run Text="A" Foreground="{StaticResource WordBlueBrush}"/><Run Text="T" Foreground="{StaticResource WordBlueBrush}"/>
+                                                </TextBlock>
+                                            </StackPanel>
+                                        </Viewbox>
+
+                                        <!-- Window Button -->
+                                        <StackPanel Orientation="Horizontal" Grid.Column="2" Grid.RowSpan="2">
+                                            <Button  Command="{Binding MinimizeCommand}" Style = "{StaticResource WindowControlButton}" Content="-"/>
+                                            <Button  Command="{Binding MaximizeCommand}" Style = "{StaticResource WindowControlButton}" Content="[ ]"/>
+                                            <Button  Command="{Binding CloseCommand}"    Style = "{StaticResource WindowCloseButton}" Content="x"/>
+
+                                        </StackPanel>
+
+                                    </Grid>
+                                    <Expander Grid.Row="1" Style="{DynamicResource ExpanderStyle1}" >
+                                        <Menu Style="{DynamicResource MenuStyle1}">
+                                            <MenuItem Header="_File" >
+                                                <MenuItem Header="_Status"/>
+                                                <MenuItem Header="_New Connection" />
+                                                <MenuItem Header="_Group Conversation"/>
+                                                <MenuItem Header="_Exit"/>
+
+                                            </MenuItem>
+                                            <MenuItem Header="_Tools" >
+                                                <MenuItem Header="_Settings" />
+                                                <MenuItem Header="_About"/>
+                                                <MenuItem Header="_FAQ"/>
+
+                                            </MenuItem>
+                                        </Menu>
+                                    </Expander>
+
+
+
+                                    <!-- Drop Shadow -->
+                                    <Border Grid.Row="2" Height="3" BorderThickness="0 0.2 0 0">
+                                        <!-- Underline gradient  from left to right and right to left-->
+                                        <Border.BorderBrush>
+                                            <LinearGradientBrush StartPoint="0,0" EndPoint="1, 0">
+                                                <GradientStop Color="{StaticResource TopLeftRightBorderColor}" Offset="0.0"/>
+                                                <GradientStop Color="{StaticResource TopMiddleBorderColor}" Offset="0.5"/>
+                                                <GradientStop Color="{StaticResource TopLeftRightBorderColor}" Offset="1.0"/>
+                                            </LinearGradientBrush>
+                                        </Border.BorderBrush>
+                                        <!-- Droppshadow of  of the gradient as above-->
+                                        <Border.Background>
+                                            <LinearGradientBrush StartPoint="0,0" EndPoint="0 , 1">
+                                                <GradientStop Color="{StaticResource TopBarColor}" Offset="0.0"/>
+                                                <GradientStop Color="{StaticResource TopBarColor}" Offset="1.0"/>
+                                            </LinearGradientBrush>
+                                        </Border.Background>
+                                    </Border>
+                                    <Grid Grid.Row="3" >
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="Auto"/>
+                                            <ColumnDefinition Width="*"/>
+                                        </Grid.ColumnDefinitions>
+                                        <TextBlock Grid.Column="0" Text=" STATUS " FontFamily="{StaticResource LatoRegular}" FontSize="{StaticResource FontSizeSmall}" Foreground="{StaticResource ForegroundLightBrush}" Margin="5 1 5 1" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                        <Border Grid.Column="1" CornerRadius="3" BorderBrush="#dedede" BorderThickness="1">
+                                            <TextBox Grid.Column="1" BorderThickness="0" BorderBrush="Transparent" Margin="2 2 5 2" Style="{StaticResource WaterMarkTextbox}"/>
+                                        </Border>
+                                    </Grid>
+
+                                    <!-- Page Content -->
+                                    <Border Grid.Row="4" Padding="{Binding InnerContentPadding}">
+                                        <!-- Following is used to set ackground image-->
+                                        <!--<Border>
+                                        <Border.Background>
+                                            <ImageBrush TileMode="Tile" ViewportUnits="Absolute" Viewport="0 0 500 500" ImageSource=""
+                                        </Border.Background>-->
+                                        <ContentPresenter Content="{TemplateBinding Content}"/>
+                                        <!--</Border>-->
+                                    </Border>
+                                </Grid>
+                            </Grid>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    <!-- For making a window without Max and Min then you only need ResizeBorderThickness. You dont need
+    tge Window.resources above -->
+    <WindowChrome.WindowChrome>
+        <WindowChrome 
+            ResizeBorderThickness="{Binding ResizeBorderThikness}"
+            CaptionHeight="{Binding TitleHeight}"
+            CornerRadius="4"
+            GlassFrameThickness="0"
+            />
+    </WindowChrome.WindowChrome>
+
+    <Grid Background="{StaticResource MainContentColorBrush}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="27*"/>
+            <ColumnDefinition Width="33*"/>
+            <ColumnDefinition Width="340*"/>
+        </Grid.ColumnDefinitions>
+
+
+    </Grid>
+</Window>
