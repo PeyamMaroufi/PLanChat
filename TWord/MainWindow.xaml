@@ -140,8 +140,8 @@
                                             <ColumnDefinition Width="*"/>
                                         </Grid.ColumnDefinitions>
                                         <TextBlock Grid.Column="0" Text=" STATUS " FontFamily="{StaticResource LatoRegular}" FontSize="{StaticResource FontSizeSmall}" Foreground="{StaticResource ForegroundLightBrush}" Margin="5 1 5 1" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                                        <Border Grid.Column="1" CornerRadius="3" BorderBrush="#dedede" BorderThickness="1">
-                                            <TextBox Grid.Column="1" BorderThickness="0" BorderBrush="Transparent" Margin="2 2 5 2" Style="{StaticResource WaterMarkTextbox}"/>
+                                        <Border Grid.Column="1" CornerRadius="3" BorderBrush="#dedede" BorderThickness="1" Margin="5 2 5 2">
+                                            <TextBox Grid.Column="1" BorderThickness="0" BorderBrush="Transparent" Style="{StaticResource WaterMarkTextbox}"/>
                                         </Border>
                                     </Grid>
 
