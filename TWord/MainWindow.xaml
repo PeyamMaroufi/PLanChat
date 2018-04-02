@@ -102,7 +102,7 @@
                                                 <MenuItem Header="_Status">
                                                     <MenuItem.Icon>
                                                         <Frame Source="/images/success.xaml"/>
-                                                    </MenuItem.Icon> 
+                                                    </MenuItem.Icon>
                                                 </MenuItem>
                                                 <MenuItem Header="_New Connection">
                                                     <MenuItem.Icon>
@@ -167,7 +167,7 @@
                                             <ColumnDefinition Width="Auto"/>
                                             <ColumnDefinition Width="*"/>
                                         </Grid.ColumnDefinitions>
-                                        <TextBlock Grid.Column="0" Text=" STATUS " FontFamily="{StaticResource LatoRegular}" FontSize="{StaticResource FontSizeSmall}" Foreground="{StaticResource ForegroundLightBrush}" Margin="5 1 5 1" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                        <Label Grid.Column="0" Content=" STATUS " FontFamily="{StaticResource LatoRegular}" FontSize="{StaticResource FontSizeSmall}" Margin="5 1 5 1" HorizontalAlignment="Center" VerticalAlignment="Center" Style="{StaticResource LabelsStyle}"/>
                                         <Border Grid.Column="1" CornerRadius="3" BorderBrush="#E0F7FA" BorderThickness="1" Margin="5 2 5 2" Background="#E1F5FE">
                                             <TextBox Grid.Column="1" BorderThickness="0" BorderBrush="Transparent" Style="{StaticResource WaterMarkTextbox}"/>
                                         </Border>
@@ -201,14 +201,20 @@
             GlassFrameThickness="0"
             />
     </WindowChrome.WindowChrome>
-
-    <Grid Background="{StaticResource MainContentColorBrush}">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="27*"/>
-            <ColumnDefinition Width="33*"/>
-            <ColumnDefinition Width="340*"/>
-        </Grid.ColumnDefinitions>
-
-
-    </Grid>
+    <Border BorderBrush="#EEEEEE" BorderThickness="1" Margin="2" CornerRadius="3"  >
+        <StackPanel Margin="5" Background="{StaticResource MainContentColorBrush}" Orientation="Vertical" Name="root" >
+            <StackPanel Orientation="Horizontal">
+                <Frame Source="/images/star.xaml" Width="14"/>
+                <Label Content="Favorites" Margin="5" Style="{StaticResource LabelsStyle}"/>
+            </StackPanel>
+            <Separator Name="MySeparator" Height="2" Opacity="0.5"  Width="Auto" Margin="4,0,4,0"        HorizontalAlignment="Stretch" VerticalAlignment="Bottom"              
+               Background="#dedede" />
+            <StackPanel Orientation="Horizontal" Margin="0 5 0 0">
+                <Frame Source="/images/wifi.xaml" Width="14"/>
+                <Label Content="Connections" Margin="5" Style="{StaticResource LabelsStyle}"/>
+            </StackPanel>
+            <Separator Name="MySeparator2" Height="2" Opacity="0.5"  Width="Auto" Margin="4,0,4,0"        HorizontalAlignment="Stretch" VerticalAlignment="Bottom"              
+               Background="#dedede" />
+        </StackPanel>
+    </Border>
 </Window>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--This file is NOT compatible with Silverlight-->
+<Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" Stretch="Uniform">
+  <Canvas Name="Capa_1" Canvas.Left="0" Canvas.Top="0" Width="53.867" Height="53.867">
+    <Canvas.RenderTransform>
+      <TranslateTransform X="0" Y="0"/>
+    </Canvas.RenderTransform>
+    <Canvas.Resources/>
+    <!--Unknown tag: metadata-->
+    <!--Unknown tag: sodipodi:namedview-->
+    <Polygon xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Points="26.934,1.318 35.256,18.182 53.867,20.887 40.4,34.013 43.579,52.549 26.934,43.798   10.288,52.549 13.467,34.013 0,20.887 18.611,18.182 " Name="polygon49" FillRule="NonZero" Fill="#FFEFCE4A"/>
+    <Canvas Name="g51"/>
+    <Canvas Name="g53"/>
+    <Canvas Name="g55"/>
+    <Canvas Name="g57"/>
+    <Canvas Name="g59"/>
+    <Canvas Name="g61"/>
+    <Canvas Name="g63"/>
+    <Canvas Name="g65"/>
+    <Canvas Name="g67"/>
+    <Canvas Name="g69"/>
+    <Canvas Name="g71"/>
+    <Canvas Name="g73"/>
+    <Canvas Name="g75"/>
+    <Canvas Name="g77"/>
+    <Canvas Name="g79"/>
+  </Canvas>
+</Viewbox>
