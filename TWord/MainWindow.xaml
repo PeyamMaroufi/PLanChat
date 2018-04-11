@@ -73,7 +73,7 @@
                                         </Grid.ColumnDefinitions>
 
                                         <!-- Icon -->
-                                        <Button Style="{StaticResource SystemIconButton}" Command="{Binding MenuCommand}" Grid.ColumnSpan="2" Margin="0,0,263,0" Grid.RowSpan="2">
+                                        <Button Style="{StaticResource SystemIconButton}" Command="{Binding MenuCommand}" Grid.ColumnSpan="2" Margin="0,0,263,0" Grid.RowSpan="2" HorizontalAlignment="Left">
                                             <Image Source="/images/Logo/Logo-small.png"/>
                                         </Button>
 
@@ -168,7 +168,7 @@
                                             <ColumnDefinition Width="*"/>
                                         </Grid.ColumnDefinitions>
                                         <Label Grid.Column="0" Content=" STATUS " FontFamily="{StaticResource LatoRegular}" FontSize="{StaticResource FontSizeSmall}" Margin="5 1 5 1" HorizontalAlignment="Center" VerticalAlignment="Center" Style="{StaticResource LabelsStyle}"/>
-                                        <Border Grid.Column="1" CornerRadius="3" BorderBrush="#E0F7FA" BorderThickness="1" Margin="5 2 5 2" Background="#E1F5FE">
+                                        <Border Grid.Column="1" CornerRadius="3" BorderBrush="#2196F3" BorderThickness="1" Margin="5 2 5 2" Background="#2196F3">
                                             <TextBox Grid.Column="1" BorderThickness="0" BorderBrush="Transparent" Style="{StaticResource WaterMarkTextbox}"/>
                                         </Border>
                                     </Grid>
@@ -213,8 +213,8 @@
 
                     
                         <Grid Height="30">
-                            <Border  CornerRadius="2" BorderBrush="#E0F7FA" BorderThickness="1"  Background="#E1F5FE">
-                                <TextBox VerticalAlignment="Center" BorderThickness="0" BorderBrush="Transparent" Style="{StaticResource WaterMarkTextbox}"/>
+                        <Border  CornerRadius="2" BorderBrush="#2196F3" BorderThickness="1"  Background="#2196F3">
+                            <TextBox VerticalAlignment="Center" BorderThickness="0" BorderBrush="Transparent" Style="{StaticResource WaterMarkTextboxSearch}"/>
                             </Border>
                         </Grid>
                  

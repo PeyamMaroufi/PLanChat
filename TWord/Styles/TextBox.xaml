@@ -16,7 +16,7 @@
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type TextBox}">
 
-                    <Grid Background="#E0F7FA">
+                    <Grid Background="#2196F3">
                         <Frame Source="/images/success.xaml" Width="16" HorizontalAlignment="Left">
                             <Frame.Visibility>
                                 <MultiBinding Converter="{StaticResource InputToVisibility}">
@@ -25,7 +25,41 @@
                                 </MultiBinding>
                             </Frame.Visibility>
                         </Frame>
-                        <TextBlock Text=" What's up?" HorizontalAlignment="Center" FontFamily="{StaticResource LatoRegular}" FontSize="{StaticResource FontSizeSmall}" VerticalAlignment="Center" Foreground="{StaticResource ForegroundLightBrush}"  >
+                        <TextBlock Text=" What's up?" HorizontalAlignment="Center" FontFamily="{StaticResource LatoRegular}" FontSize="{StaticResource FontSizeSmall}" VerticalAlignment="Center" Foreground="#EEEEEE"  >
+                            <TextBlock.Visibility>
+                                <MultiBinding Converter="{StaticResource InputToVisibility}">
+                                    <Binding ElementName="inputText" Path="Text.IsEmpty"/>
+                                    <Binding ElementName="inputText" Path="IsFocused"/>
+                                </MultiBinding>
+                            </TextBlock.Visibility>
+                        </TextBlock>
+                        <TextBox x:Name="inputText" Background="Transparent" BorderThickness="0"/>
+
+                    </Grid>
+
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="WaterMarkTextboxSearch" TargetType="{x:Type TextBox}">
+        <Setter Property="BorderBrush" Value="#dedede"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="Margin" Value="5 2 5 2"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type TextBox}">
+
+                    <Grid Background="#2196F3">
+                        <Frame Source="/images/search.xaml" Width="16" HorizontalAlignment="Left">
+                            <Frame.Visibility>
+                                <MultiBinding Converter="{StaticResource InputToVisibility}">
+                                    <Binding ElementName="inputText" Path="Text.IsEmpty"/>
+                                    <Binding ElementName="inputText" Path="IsFocused"/>
+                                </MultiBinding>
+                            </Frame.Visibility>
+                        </Frame>
+                        <TextBlock Text=" Search" HorizontalAlignment="Center" FontFamily="{StaticResource LatoRegular}" FontSize="{StaticResource FontSizeSmall}" VerticalAlignment="Center" Foreground="#EEEEEE"  >
                             <TextBlock.Visibility>
                                 <MultiBinding Converter="{StaticResource InputToVisibility}">
                                     <Binding ElementName="inputText" Path="Text.IsEmpty"/>
