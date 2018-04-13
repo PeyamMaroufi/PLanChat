@@ -16,8 +16,8 @@
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type TextBox}">
 
-                    <Grid Background="#2196F3">
-                        <Frame Source="/images/success.xaml" Width="16" HorizontalAlignment="Left">
+                    <Grid >
+                        <Frame Source="/images/good-mood-emoticon.xaml" Width="16" HorizontalAlignment="Left" Opacity="0.7" Margin="3">
                             <Frame.Visibility>
                                 <MultiBinding Converter="{StaticResource InputToVisibility}">
                                     <Binding ElementName="inputText" Path="Text.IsEmpty"/>
@@ -25,7 +25,7 @@
                                 </MultiBinding>
                             </Frame.Visibility>
                         </Frame>
-                        <TextBlock Text=" What's up?" HorizontalAlignment="Center" FontFamily="{StaticResource LatoRegular}" FontSize="{StaticResource FontSizeSmall}" VerticalAlignment="Center" Foreground="#EEEEEE"  >
+                        <TextBlock Text=" What's up?" HorizontalAlignment="Center" FontFamily="{StaticResource UbuntuRegular}" FontSize="{StaticResource FontSizeSmall}" VerticalAlignment="Center" Foreground="#9E9E9E" Margin="3" >
                             <TextBlock.Visibility>
                                 <MultiBinding Converter="{StaticResource InputToVisibility}">
                                     <Binding ElementName="inputText" Path="Text.IsEmpty"/>
@@ -59,7 +59,7 @@
                                 </MultiBinding>
                             </Frame.Visibility>
                         </Frame>
-                        <TextBlock Text=" Search" HorizontalAlignment="Center" FontFamily="{StaticResource LatoRegular}" FontSize="{StaticResource FontSizeSmall}" VerticalAlignment="Center" Foreground="#EEEEEE"  >
+                        <TextBlock Text=" Search" HorizontalAlignment="Center" FontFamily="{StaticResource UbuntuRegular}" FontSize="{StaticResource FontSizeSmall}" VerticalAlignment="Center" Foreground="#EEEEEE"  >
                             <TextBlock.Visibility>
                                 <MultiBinding Converter="{StaticResource InputToVisibility}">
                                     <Binding ElementName="inputText" Path="Text.IsEmpty"/>

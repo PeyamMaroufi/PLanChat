@@ -7,6 +7,9 @@
     <FontFamily x:Key="LatoRegular">pack://application;,,,/Fonts/#Lato Regular</FontFamily>
     <FontFamily x:Key="LatoThin">pack://application;,,,/Fonts/#Lato Thin</FontFamily>
     <FontFamily x:Key="LatoBold">pack://application;,,,/Fonts/#Lato Bold</FontFamily>
+    <FontFamily x:Key="UbuntuBold">pack://application;,,,/Fonts/#Ubuntu Bold</FontFamily>
+    <FontFamily x:Key="UbuntuRegular">pack://application;,,,/Fonts/#Ubuntu Regular</FontFamily>
+    <FontFamily x:Key="UbuntuLight">pack://application;,,,/Fonts/#Ubuntu Light</FontFamily>
     
     <Style TargetType="{x:Type Control}" x:Key="BaseStyle">
         <Setter Property="FontFamily" Value="Segoe UI Symbol"/>

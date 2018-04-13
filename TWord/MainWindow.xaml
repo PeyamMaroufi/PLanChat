@@ -12,7 +12,7 @@
         MinWidth="{Binding WindowMinimumWidth}"
         MinHeight="{Binding WindowMinimumHeight}"
         Icon="/images/Logo/logo-small.png"
-        Title="Welcome To Terco" Height="800" Width="1000">
+        Title="Welcome To Terco" Height="800" Width="400">
 
     <Window.Resources>
         <Style TargetType="{x:Type local:MainWindow}">
@@ -164,12 +164,33 @@
                                     </Border>
                                     <Grid Grid.Row="3" >
                                         <Grid.ColumnDefinitions>
-                                            <ColumnDefinition Width="Auto"/>
+                                            <ColumnDefinition Width="85"/>
                                             <ColumnDefinition Width="*"/>
                                         </Grid.ColumnDefinitions>
-                                        <Label Grid.Column="0" Content=" STATUS " FontFamily="{StaticResource LatoRegular}" FontSize="{StaticResource FontSizeSmall}" Margin="5 1 5 1" HorizontalAlignment="Center" VerticalAlignment="Center" Style="{StaticResource LabelsStyle}"/>
-                                        <Border Grid.Column="1" CornerRadius="3" BorderBrush="#2196F3" BorderThickness="1" Margin="5 2 5 2" Background="#2196F3">
-                                            <TextBox Grid.Column="1" BorderThickness="0" BorderBrush="Transparent" Style="{StaticResource WaterMarkTextbox}"/>
+                                        <!-- Avatar-->
+                                        <Border Grid.Column="0" CornerRadius="3"  Margin="5">
+                                            <Frame  Source="/images/avatar.xaml"/>
+                                        </Border>
+                                        <!--Status and message update section-->
+                                        <Border Grid.Column="1" Height="Auto" CornerRadius="3" BorderBrush="#EEEEEE" BorderThickness="1" Margin="5 2 5 2" Background="#F5F5F5">
+
+                                            <StackPanel Orientation="Vertical" >
+                                                <!-- Status-->
+                                                <Border Background="White" CornerRadius="3" Margin="3">
+                                                    <TextBox   Style="{StaticResource WaterMarkTextbox}"  />
+                                                </Border>
+                                                <!--Mood-->
+                                                <Border Background="White" CornerRadius="3" Padding="6" Margin="3">
+                                                    <Grid>
+                                                        <Grid.ColumnDefinitions>
+                                                            <ColumnDefinition Width="Auto"/>
+                                                            <ColumnDefinition Width="*"/>
+                                                        </Grid.ColumnDefinitions>
+                                                        <Label Grid.Column="0" Content="Mood" FontFamily="{StaticResource UbuntuRegular}" Foreground="{StaticResource ForegroundMainBrush}" FontSize="{StaticResource FontSizeSmall}"/>
+                                                        <ComboBox Grid.Column="1"  BorderThickness="0" Width="Auto"/>
+                                                    </Grid>
+                                                </Border>
+                                            </StackPanel>
                                         </Border>
                                     </Grid>
 
@@ -203,29 +224,27 @@
     </WindowChrome.WindowChrome>
     <Border BorderBrush="#EEEEEE" BorderThickness="1" Margin="2" CornerRadius="3"  >
         <Grid>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="2*"/>
-            </Grid.ColumnDefinitions>
+
             <Grid Grid.Column="0">
 
-                <StackPanel  Margin="5" Background="{StaticResource MainContentColorBrush}" Orientation="Vertical" Name="root" >
-
-                    
-                        <Grid Height="30">
+                <StackPanel  Margin="2"  Background="{StaticResource MainContentColorBrush}" Orientation="Vertical" Name="root" >
+                    <!-- Search box-->
+                    <Grid Height="30">
                         <Border  CornerRadius="2" BorderBrush="#2196F3" BorderThickness="1"  Background="#2196F3">
                             <TextBox VerticalAlignment="Center" BorderThickness="0" BorderBrush="Transparent" Style="{StaticResource WaterMarkTextboxSearch}"/>
-                            </Border>
-                        </Grid>
-                 
-                    
-                    
+                        </Border>
+                    </Grid>
+
+                    <!-- Favorites-->
                     <StackPanel Orientation="Horizontal">
                         <Frame Source="/images/star.xaml" Width="14"/>
                         <Label Content="Favorites" Margin="5" Style="{StaticResource LabelsStyle}"/>
                     </StackPanel>
+
                     <Separator Name="MySeparator" Height="2" Opacity="0.5"  Width="Auto" Margin="4,0,4,0"        HorizontalAlignment="Stretch" VerticalAlignment="Bottom"              
                Background="#dedede" />
+
+                    <!--Contacts-->
                     <StackPanel Orientation="Horizontal" Margin="0 5 0 0">
                         <Frame Source="/images/wifi.xaml" Width="14"/>
                         <Label Content="Connections" Margin="5" Style="{StaticResource LabelsStyle}"/>
@@ -233,6 +252,7 @@
                     <Separator Name="MySeparator2" Height="2" Opacity="0.5"  Width="Auto" Margin="4,0,4,0"        HorizontalAlignment="Stretch" VerticalAlignment="Bottom"              
                Background="#dedede" />
                 </StackPanel>
+
             </Grid>
         </Grid>
     </Border>

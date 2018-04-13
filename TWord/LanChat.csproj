@@ -127,11 +127,19 @@
     <Compile Include="ViewModel\Base\RelayCommand.cs" />
     <Compile Include="ViewModel\WindowViewModel.cs" />
     <Compile Include="Window\WindowResize.cs" />
+    <Page Include="images\avatar.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="images\controls.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
     <Page Include="images\ExpandedIcon.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="images\good-mood-emoticon.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -252,6 +260,14 @@
     <Resource Include="Fonts\Lato-SemiboldItalic.ttf" />
     <Resource Include="Fonts\Lato-Thin.ttf" />
     <Resource Include="Fonts\Lato-ThinItalic.ttf" />
+    <Resource Include="Fonts\Ubuntu-Bold.ttf" />
+    <Resource Include="Fonts\Ubuntu-BoldItalic.ttf" />
+    <Resource Include="Fonts\Ubuntu-Italic.ttf" />
+    <Resource Include="Fonts\Ubuntu-Light.ttf" />
+    <Resource Include="Fonts\Ubuntu-LightItalic.ttf" />
+    <Resource Include="Fonts\Ubuntu-Medium.ttf" />
+    <Resource Include="Fonts\Ubuntu-MediumItalic.ttf" />
+    <Resource Include="Fonts\Ubuntu-Regular.ttf" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
