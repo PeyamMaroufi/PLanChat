@@ -43,14 +43,14 @@
     </Style>
 
     <Style x:Key="WaterMarkTextboxSearch" TargetType="{x:Type TextBox}">
-        <Setter Property="BorderBrush" Value="#dedede"/>
+        <Setter Property="BorderBrush" Value="#81C784"/>
         <Setter Property="BorderThickness" Value="1"/>
         <Setter Property="Margin" Value="5 2 5 2"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type TextBox}">
 
-                    <Grid Background="#2196F3">
+                    <Grid Background="#4CAF50">
                         <Frame Source="/images/search.xaml" Width="16" HorizontalAlignment="Left">
                             <Frame.Visibility>
                                 <MultiBinding Converter="{StaticResource InputToVisibility}">

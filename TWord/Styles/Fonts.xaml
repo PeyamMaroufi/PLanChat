@@ -25,7 +25,7 @@
     <Style TargetType="{x:Type ListView}" BasedOn="{StaticResource BaseStyle}"/>
     <Style TargetType="{x:Type ListViewItem}" BasedOn="{StaticResource BaseStyle}"/>
     
-    <system:Double x:Key="FontSizeRegular">12</system:Double>
-    <system:Double x:Key="FontSizeSmall">10</system:Double>
+    <system:Double x:Key="FontSizeRegular">13</system:Double>
+    <system:Double x:Key="FontSizeSmall">11</system:Double>
     <system:Double x:Key="FontSizeLarge">30</system:Double>
 </ResourceDictionary>

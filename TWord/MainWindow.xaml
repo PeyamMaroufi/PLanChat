@@ -181,13 +181,32 @@
                                                 </Border>
                                                 <!--Mood-->
                                                 <Border Background="White" CornerRadius="3" Padding="6" Margin="3">
-                                                    <Grid>
+                                                    <Grid Height="30">
                                                         <Grid.ColumnDefinitions>
                                                             <ColumnDefinition Width="Auto"/>
                                                             <ColumnDefinition Width="*"/>
                                                         </Grid.ColumnDefinitions>
-                                                        <Label Grid.Column="0" Content="Mood" FontFamily="{StaticResource UbuntuRegular}" Foreground="{StaticResource ForegroundMainBrush}" FontSize="{StaticResource FontSizeSmall}"/>
-                                                        <ComboBox Grid.Column="1"  BorderThickness="0" Width="Auto"/>
+                                                        <Label Grid.Column="0" Content="MOOD: " FontFamily="{StaticResource UbuntuRegular}" Foreground="{StaticResource ForegroundMainBrush}" FontSize="{StaticResource FontSizeSmall}" VerticalAlignment="Center"/>
+                                                        <ComboBox Grid.Column="1"  BorderThickness="0" Width="Auto" Style="{StaticResource ComboBoxFlatStyle}">
+                                                            <ComboBoxItem>
+                                                                <StackPanel Orientation="Horizontal">
+                                                                    <Frame Source="/images/available.xaml" Width="15"/>
+                                                                    <Label Content="Available" VerticalAlignment="Center" FontFamily="{StaticResource UbuntuRegular}" Foreground="{StaticResource ForegroundMainBrush}"/>
+                                                                </StackPanel>
+                                                            </ComboBoxItem>
+                                                            <ComboBoxItem>
+                                                                <StackPanel Orientation="Horizontal">
+                                                                    <Frame Source="/images/busy.xaml" Width="15"/>
+                                                                    <Label Content="Busy" VerticalAlignment="Center" FontFamily="{StaticResource UbuntuRegular}" Foreground="{StaticResource ForegroundMainBrush}"/>
+                                                                </StackPanel>
+                                                            </ComboBoxItem>
+                                                            <ComboBoxItem>
+                                                                <StackPanel Orientation="Horizontal">
+                                                                    <Frame Source="/images/away.xaml" Width="15" />
+                                                                    <Label Content="Away" VerticalAlignment="Center" FontFamily="{StaticResource UbuntuRegular}" Foreground="{StaticResource ForegroundMainBrush}"/>
+                                                                </StackPanel>
+                                                            </ComboBoxItem>
+                                                        </ComboBox>
                                                     </Grid>
                                                 </Border>
                                             </StackPanel>
@@ -230,7 +249,7 @@
                 <StackPanel  Margin="2"  Background="{StaticResource MainContentColorBrush}" Orientation="Vertical" Name="root" >
                     <!-- Search box-->
                     <Grid Height="30">
-                        <Border  CornerRadius="2" BorderBrush="#2196F3" BorderThickness="1"  Background="#2196F3">
+                        <Border  CornerRadius="2" BorderBrush="#4CAF50" BorderThickness="1"  Background="#4CAF50">
                             <TextBox VerticalAlignment="Center" BorderThickness="0" BorderBrush="Transparent" Style="{StaticResource WaterMarkTextboxSearch}"/>
                         </Border>
                     </Grid>

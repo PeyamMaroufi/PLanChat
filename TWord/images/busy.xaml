@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--This file is NOT compatible with Silverlight-->
+<Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" Stretch="Uniform">
+  <Canvas Name="Layer_1" Canvas.Left="0" Canvas.Top="0" Width="496.158" Height="496.158">
+    <Canvas.RenderTransform>
+      <TranslateTransform X="0" Y="0"/>
+    </Canvas.RenderTransform>
+    <Canvas.Resources/>
+    <!--Unknown tag: metadata-->
+    <!--Unknown tag: sodipodi:namedview-->
+    <Path xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Name="path1690" Fill="#FFF2372E">
+      <Path.Data>
+        <PathGeometry Figures="M248.082 0.003C111.07 0.003 0 111.061 0 248.085c0 137 111.07 248.07 248.082 248.07  c137.006 0 248.076-111.07 248.076-248.07C496.158 111.061 385.088 0.003 248.082 0.003z" FillRule="NonZero"/>
+      </Path.Data>
+    </Path>
+    <Canvas Name="g1694"/>
+    <Canvas Name="g1696"/>
+    <Canvas Name="g1698"/>
+    <Canvas Name="g1700"/>
+    <Canvas Name="g1702"/>
+    <Canvas Name="g1704"/>
+    <Canvas Name="g1706"/>
+    <Canvas Name="g1708"/>
+    <Canvas Name="g1710"/>
+    <Canvas Name="g1712"/>
+    <Canvas Name="g1714"/>
+    <Canvas Name="g1716"/>
+    <Canvas Name="g1718"/>
+    <Canvas Name="g1720"/>
+    <Canvas Name="g1722"/>
+  </Canvas>
+</Viewbox>
